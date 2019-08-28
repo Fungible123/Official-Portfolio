@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
     h3 {
         font-family: ${props => props.theme.font.primary};
-        color: ${props => (props.dark ? "#1D1D1D" : "#FFFFFF")};
+        color: ${props => props.theme.color.dark};
         ${props => props.theme.font_size.regular}
     }
 

@@ -16,7 +16,6 @@ const theme = {
     colored: {
       general: "#0A7953",
       shapes: "rgba(10, 121, 83, 0.05)",
-      framework: `${props => (props.gatsby ? "#663399" : "#61DAFB")}`,
     },
   },
   screen: {

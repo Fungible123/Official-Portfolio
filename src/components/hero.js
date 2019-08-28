@@ -24,6 +24,7 @@ const Intro = styled.div`
   }
   h3 {
     margin-bottom: 10px;
+    color: ${props => props.theme.color.light};
   }
   a {
     color: ${props => props.theme.color.colored.general};
