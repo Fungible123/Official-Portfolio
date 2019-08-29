@@ -3,6 +3,8 @@ import Particles from "react-particles-js"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { LinkedIn, Github, FiveHundred, Flickr } from "./social"
+import ExternalLink from "./externalLinks"
+import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const HeroContainer = styled.div`
   position: relative;
@@ -29,9 +31,13 @@ const Intro = styled.div`
   a {
     color: ${props => props.theme.color.colored.general};
   }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    position: relative;
+    top: 25%;
+  }
 `
 
-const Projects = styled(Link)`
+const Projects = styled(AnchorLink)`
   text-decoration: none;
   p {
     margin-bottom: 5px;
@@ -164,22 +170,22 @@ const Hero = () => {
           <h1>Donny Layug</h1>
         </Link>
         <h3>Front-end Web Developer</h3>
-        <Projects to="/">
+        <Projects href="#proj">
           <p>View my recent projects</p>
         </Projects>
         <div>
-          <Link to="/">
+          <ExternalLink href="https://www.linkedin.com/in/donny-layug/">
             <LinkedIn />
-          </Link>
-          <Link to="/">
+          </ExternalLink>
+          <ExternalLink href="https://github.com/Fungible123">
             <Github />
-          </Link>
-          <Link to="/">
+          </ExternalLink>
+          <ExternalLink href="https://500px.com/donpudong">
             <FiveHundred />
-          </Link>
-          <Link to="/">
+          </ExternalLink>
+          <ExternalLink href="https://www.flickr.com/photos/pudong_photography/">
             <Flickr />
-          </Link>
+          </ExternalLink>
         </div>
       </Intro>
     </HeroContainer>

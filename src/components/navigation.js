@@ -15,6 +15,9 @@ const Logo = styled(Img)`
   width: 44px;
   height: 37px;
   margin: 0px 20px;
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    margin: 0px 10px;
+  }
 `
 
 const LinkItem = styled(Link)`
@@ -34,6 +37,9 @@ const LinkItem = styled(Link)`
       color: ${props => props.theme.color.colored.general};
       text-decoration: underline;
     }
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    margin: 10px 10px;
   }
 `
 
