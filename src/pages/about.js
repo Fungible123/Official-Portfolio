@@ -10,29 +10,54 @@ import Scrollup from "@components/scrollup"
 
 const Title = styled.h1`
   margin-top: 50px;
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    font-size: 48px;
+    text-align: center;
+  }
 `
 
 const Image = styled(Img)`
-  max-width: 100px;
-  max-height: 100px;
+  width: 90px;
+  height: 90px;
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    width: 60px;
+    height: 60px;
+  }
 `
 
 const MainSectionContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 80px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    margin: 0 20px;
+  }
 `
 
 const SectionContainer = styled.div`
   margin: 50px 0;
   p {
     text-align: justify;
+    @media (max-width: ${props => props.theme.screen.xs}) {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    margin: 30px 0;
   }
 `
 
 const LeftSection = styled.div`
   p {
     margin-top: 50px;
+    @media (max-width: ${props => props.theme.screen.xs}) {
+      margin: 30px 0;
+    }
   }
 `
 
@@ -40,6 +65,18 @@ const List = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
   align-items: center;
+  span {
+    font-weight: bold;
+    font-size: 24px;
+    @media (max-width: ${props => props.theme.screen.xs}) {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 `
 
 const External = styled(ExternalLink)`
@@ -57,6 +94,16 @@ const LearnMore = styled.div`
 
 const SkillsContainer = styled.div`
   margin-bottom: 20px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    p {
+      text-align: center;
+    }
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    p {
+      font-weight: bold;
+    }
+  }
 `
 
 const Skill = styled.ul`
@@ -91,6 +138,19 @@ const Contact = styled.div`
   h2 {
     margin-right: 20px;
   }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    h2 {
+      font-size: 36px;
+    }
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
 `
 
 const Button = styled(Link)`
@@ -113,6 +173,10 @@ const Button = styled(Link)`
       color: ${props => props.theme.color.light};
     }
   }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    width: 207px;
+    height: 45px;
+  }
 `
 
 const About = () => {
@@ -120,28 +184,28 @@ const About = () => {
     query {
       time: file(relativePath: { eq: "speedo-1970476_640.png" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 80, maxHeight: 80) {
+          fluid(quality: 100, maxWidth: 90, maxHeight: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       lock: file(relativePath: { eq: "padlock-2873246_640.png" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 80, maxHeight: 80) {
+          fluid(quality: 100, maxWidth: 90, maxHeight: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       money: file(relativePath: { eq: "128px-Money_font_awesome.png" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 80, maxHeight: 80) {
+          fluid(quality: 100, maxWidth: 90, maxHeight: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       content: file(relativePath: { eq: "content.png" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 80, maxHeight: 90) {
+          fluid(quality: 100, maxWidth: 90, maxHeight: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -176,40 +240,41 @@ const About = () => {
               <List>
                 <Image fluid={icons.time.childImageSharp.fluid} />
                 <p>
-                  Speed: The speed advantages of static websites can be
-                  remarkable. With HTML generated in advanced and database
-                  queries eliminated, your content can be served instantly from
-                  a global CDN like{" "}
+                  <span>Speed</span>: The speed advantages of static websites
+                  can be remarkable. With HTML generated in advanced and
+                  database queries eliminated, your content can be served
+                  instantly from a global CDN like{" "}
                   <External href="https://www.netlify.com/"> Netlify</External>.
                 </p>
               </List>
               <List>
                 <Image fluid={icons.lock.childImageSharp.fluid} />
                 <p>
-                  Security: With server-side processes abstracted into
-                  microservice APIs, surface areas for attacks are reduced. You
-                  can also leverage the domain expertise of specialist
+                  <span>Security</span>: With server-side processes abstracted
+                  into microservice APIs, surface areas for attacks are reduced.
+                  You can also leverage the domain expertise of specialist
                   third-party services.
                 </p>
               </List>
               <List>
                 <Image fluid={icons.money.childImageSharp.fluid} />
                 <p>
-                  Cheaper: When your deployment amounts to a stack of files that
-                  can be served anywhere, scaling is a matter of serving those
-                  files in more places. CDNs are perfect for this, and often
-                  include scaling in all of their plans.
+                  <span>Cheaper</span>: When your deployment amounts to a stack
+                  of files that can be served anywhere, scaling is a matter of
+                  serving those files in more places. CDNs are perfect for this,
+                  and often include scaling in all of their plans.
                 </p>
               </List>
               <List>
                 <Image fluid={icons.content.childImageSharp.fluid} />
                 <p>
-                  Content Creation: Content is usually in a markdown file format
-                  but could be other file formats depending on the static site
-                  generator. It is relatively easy to learn even for a person
-                  who is not a developer to manage and create content for
-                  markdown files. There are also a bunch of so-called ‘headless’
-                  CMS solutions which are ideal for static websites.
+                  <span>Content Creation</span>: Content is usually in a
+                  markdown file format but could be other file formats depending
+                  on the static site generator. It is relatively easy to learn
+                  even for a person who is not a developer to manage and create
+                  content for markdown files. There are also a bunch of
+                  so-called ‘headless’ CMS solutions which are ideal for static
+                  websites.
                 </p>
               </List>
               <LearnMore>

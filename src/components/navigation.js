@@ -31,12 +31,11 @@ const LinkItem = styled(Link)`
   transition: color 0.2s ease-in-out;
   &:hover {
     color: ${props => props.theme.color.colored.general};
+    border-bottom: 1px solid #0a7953;
   }
   &.active {
-    a {
-      color: ${props => props.theme.color.colored.general};
-      text-decoration: underline;
-    }
+    color: ${props => props.theme.color.colored.general};
+    border-bottom: 1px solid #0a7953;
   }
   @media (max-width: ${props => props.theme.screen.xs}) {
     margin: 10px 10px;

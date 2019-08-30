@@ -14,6 +14,9 @@ const InnerContainer = styled.div`
   h1 {
     margin-bottom: 60px;
     text-align: center;
+    @media (max-width: ${props => props.theme.screen.xs}) {
+      font-size: 48px;
+    }
   }
 `
 
@@ -40,13 +43,13 @@ const ProjectLink = styled(ExternalLink)`
   text-decoration: none;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: all 0.2s ease-in-out;
   transform: translateY(0%);
   color: ${props => props.theme.color.dark};
   &:hover {
     border: 1px solid #0a7953;
-    box-shadow: 4px 4px 4px rgba(10, 121, 83, 0.3);
+    box-shadow: 0px 4px 10px rgba(10, 121, 83, 0.3);
     transform: translateY(-1%);
   }
   @media (max-width: ${props => props.theme.screen.md}) {

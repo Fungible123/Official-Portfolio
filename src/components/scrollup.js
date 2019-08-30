@@ -17,7 +17,7 @@ const Scrollup = () => {
           backgroundColor: "#0A7953",
           padding: 8,
         }}
-        ToggledStyle={{ right: 50 }}
+        ToggledStyle={{ right: 30 }}
       ></ScrollUpButton>
     </div>
   )

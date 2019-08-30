@@ -23,6 +23,9 @@ const Intro = styled.div`
   z-index: 999;
   h1 {
     margin-bottom: 30px;
+    @media (max-width: ${props => props.theme.screen.md}) {
+      font-size: 48px;
+    }
   }
   h3 {
     margin-bottom: 10px;
