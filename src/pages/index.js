@@ -191,7 +191,7 @@ const IndexPage = () => {
               </ProjectContent>
             </ProjectLink>
 
-            <ProjectLink href="https://donny-layug.netlify.com">
+            <ProjectLink href="https://dl-portfolio.netlify.com">
               <Image fluid={project.portfolio.childImageSharp.fluid} />
               <ProjectContent>
                 <h3>DL</h3>
