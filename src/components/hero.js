@@ -169,7 +169,7 @@ const Hero = () => {
         }}
       />
       <Intro>
-        <Link to="/">
+        <Link to="/about/">
           <h1>Donny Layug</h1>
         </Link>
         <h3>Front-end Web Developer</h3>
