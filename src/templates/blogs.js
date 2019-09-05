@@ -73,16 +73,12 @@ const Blogs = props => {
       <SEO title={props.data.contentfulBlogPost.title} />
       <Container>
         <BlogContainer>
-          <Heading>
-            <h1>{props.data.contentfulBlogPost.title}</h1>
-            <span>{props.data.contentfulBlogPost.publishedDate}</span>
-          </Heading>
-          <div>
+          <h1>{props.data.contentfulBlogPost.title}</h1>
+          <span>{props.data.contentfulBlogPost.publishedDate}</span>
           {documentToReactComponents(
             props.data.contentfulBlogPost.body.json,
             options
           )}
-          </div>
         </BlogContainer>
         <Scrollup />
       </Container>
