@@ -77,10 +77,12 @@ const Blogs = props => {
             <h1>{props.data.contentfulBlogPost.title}</h1>
             <span>{props.data.contentfulBlogPost.publishedDate}</span>
           </Heading>
+          <div>
           {documentToReactComponents(
             props.data.contentfulBlogPost.body.json,
             options
           )}
+          </div>
         </BlogContainer>
         <Scrollup />
       </Container>
