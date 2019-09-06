@@ -13,6 +13,11 @@ const SectionContainer = styled.div`
     margin: 50px 0;
     text-align: center;
   }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    h1 {
+      font-size: 48px;
+    }
+  }
 `
 
 const BlogContainer = styled.div`
@@ -38,6 +43,18 @@ const BlogContainer = styled.div`
   }
   p {
     color: ${props => props.theme.color.dark};
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin: 10px;
+    h3 {
+      font-size: 30px;
+    }
+    span {
+      font-size: 12px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
 `
 

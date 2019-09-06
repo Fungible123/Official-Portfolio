@@ -35,6 +35,27 @@ const BlogContainer = styled.div`
     max-height: 500px;
     margin: 30px auto;
   }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    h1 {
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 18px;
+    }
+    span {
+      font-size: 14px;
+    }
+    img {
+      max-width: 300px;
+      max-height: 350px;
+    }
+  }
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    margin: 0 10px;
+  }
 `
 
 const Heading = styled.div`
