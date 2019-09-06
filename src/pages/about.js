@@ -9,7 +9,7 @@ import SEO from "@components/seo"
 import Scrollup from "@components/scrollup"
 
 const Title = styled.h1`
-  margin-top: 50px;
+  margin-top: 100px;
   @media (max-width: ${props => props.theme.screen.xs}) {
     font-size: 48px;
     text-align: center;
@@ -29,6 +29,7 @@ const MainSectionContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 80px;
+  margin-bottom: 50px;
   @media (max-width: ${props => props.theme.screen.md}) {
     display: grid;
     grid-template-columns: 1fr;

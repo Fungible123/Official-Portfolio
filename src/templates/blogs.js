@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Scrollup from "@components/scrollup"
+import { DiscussionEmbed } from "disqus-react"
 
 const BlogContainer = styled.div`
   max-width: 899px;
@@ -57,6 +58,11 @@ export const query = graphql`
 `
 
 const Blogs = props => {
+  // To display disqus comments
+  const disqusConfig = {
+    shortname: process.env.GATSBY_DISQUS_NAME,
+    config: { identifier: props.data.contentfulBlogPost.title },
+  }
   // To display the images
   const options = {
     renderNode: {
@@ -73,13 +79,16 @@ const Blogs = props => {
       <SEO title={props.data.contentfulBlogPost.title} />
       <Container>
         <BlogContainer>
-          <h1>{props.data.contentfulBlogPost.title}</h1>
-          <span>{props.data.contentfulBlogPost.publishedDate}</span>
+          <Heading>
+            <h1>{props.data.contentfulBlogPost.title}</h1>
+            <span>{props.data.contentfulBlogPost.publishedDate}</span>
+          </Heading>
           {documentToReactComponents(
             props.data.contentfulBlogPost.body.json,
             options
           )}
         </BlogContainer>
+        <DiscussionEmbed {...disqusConfig} />
         <Scrollup />
       </Container>
     </Layout>
