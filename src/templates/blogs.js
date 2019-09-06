@@ -49,7 +49,6 @@ export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
-      slug
       publishedDate(formatString: "DD MMMM YYYY")
       body {
         json
@@ -63,8 +62,7 @@ const Blogs = props => {
   const disqusConfig = {
     shortname: process.env.GATSBY_DISQUS_NAME,
     config: {
-      identifier: props.data.contentfulBlogPost.slug,
-      title: props.data.contentfulBlogPost.title,
+      identifier: props.data.contentfulBlogPost.title,
     },
   }
   // To display the images
