@@ -6,6 +6,7 @@ module.exports = {
     title: `Donny Layug - Official Portfolio`,
     description: `Official Portfolio created with Gatsby and React.`,
     author: `Donny Layug`,
+    image: `src/images/officialportfolio.jpg`,
   },
   plugins: [
     {
