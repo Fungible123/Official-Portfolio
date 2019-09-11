@@ -221,19 +221,20 @@ const About = () => {
         <MainSectionContainer>
           <SectionContainer>
             <p>
-              My name is Donny. I make static websites that are responsive and
-              that are intuitive. From my previous career I have been working as
-              a provisioning consultant for telco companies in the US and
-              Australia. I’ve decided to change careers because I realized
-              coding is such a satisfying and fulfilling task and it brought
-              about a new perspective. I specialize in front-end development but
-              I aim to become a full-stack developer to expand my knowledge of
-              programming.
+              My name is Donny. I make websites that are responsive, intuitive,
+              and user-friendly. From my previous career I have been working as
+              a provisioning consultant for telecommunication companies in the
+              US and Australia. I’ve decided to shift into programming because I
+              felt that coding is a much more satisfying and fulfilling
+              activity. It also broadened my perspective in terms of personal
+              growth and development. I specialize in front-end development, but
+              I continue to improve my programming knowledge and expertise so
+              that I can become a full-stack developer.
             </p>
             <LeftSection>
               <Title>My Service</Title>
               <p>
-                Recently, I have shifted to using a modern architecture that
+                Recently, I have switched to using a modern architecture that
                 allows me to build fast and reliable websites. I use{" "}
                 <External href="https://jamstack.org/">JAMstack </External>
                 and here are the key benefits:

@@ -31,6 +31,9 @@ const Intro = styled.div`
     margin-bottom: 10px;
     color: ${props => props.theme.color.light};
   }
+  h4 {
+    color: ${props => props.theme.color.light};
+  }
   a {
     color: ${props => props.theme.color.colored.general};
   }
@@ -173,6 +176,7 @@ const Hero = () => {
           <h1>Donny Layug</h1>
         </Link>
         <h3>Front-end Web Developer</h3>
+        <h4>I make websites responsive, intuitive, and user-friendly.</h4>
         <Projects href="#proj">
           <p>View my recent projects</p>
         </Projects>
