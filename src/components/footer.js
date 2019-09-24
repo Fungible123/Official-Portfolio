@@ -100,7 +100,7 @@ const Footer = () => {
         <Container>
           <Separator>
             <Copy>
-              &copy; 2019{" "}
+              &copy;{new Date().getFullYear().toString()}{" "}
               <Highlights name>
                 <Link to="/">Donny Layug</Link>
               </Highlights>{" "}
