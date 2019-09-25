@@ -176,7 +176,7 @@ const Hero = () => {
           <h1>Donny Layug</h1>
         </Link>
         <h3>Front-end Web Developer</h3>
-        <h4>I make websites responsive, intuitive, and user-friendly.</h4>
+        <p>I create Modern, Fast, and Secure Websites.</p>
         <Projects href="#proj">
           <p>View my recent projects</p>
         </Projects>
