@@ -16,7 +16,7 @@ const Intro = styled.div`
   position: relative;
   top: 30%;
   margin: 0 auto;
-  max-width: 375px;
+  max-width: 400px;
   max-height: 207px;
   text-align: center;
   padding: 300px auto;
@@ -176,7 +176,7 @@ const Hero = () => {
           <h1>Donny Layug</h1>
         </Link>
         <h3>Front-end Web Developer</h3>
-        <p>I create Modern, Fast, and Secure Websites.</p>
+        <p>I Build Modern, Fast, and Secure Websites.</p>
         <Projects href="#proj">
           <p>View my recent projects</p>
         </Projects>
