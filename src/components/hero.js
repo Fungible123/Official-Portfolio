@@ -16,7 +16,7 @@ const Intro = styled.div`
   position: relative;
   top: 30%;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 500px;
   max-height: 207px;
   text-align: center;
   padding: 300px auto;
@@ -40,6 +40,9 @@ const Intro = styled.div`
   @media (max-width: ${props => props.theme.screen.md}) {
     position: relative;
     top: 25%;
+  }
+  p {
+    color: ${props => props.theme.color.light};
   }
 `
 
