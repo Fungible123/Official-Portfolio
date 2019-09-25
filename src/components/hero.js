@@ -41,7 +41,7 @@ const Intro = styled.div`
     position: relative;
     top: 25%;
   }
-  p {
+  .sub {
     color: ${props => props.theme.color.light};
   }
 `
@@ -179,7 +179,7 @@ const Hero = () => {
           <h1>Donny Layug</h1>
         </Link>
         <h3>Front-end Web Developer</h3>
-        <p>I Build Modern, Fast, and Secure Websites.</p>
+        <p className="sub">I Build Modern, Fast, and Secure Websites.</p>
         <Projects href="#proj">
           <p>View my recent projects</p>
         </Projects>
