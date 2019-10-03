@@ -20,6 +20,7 @@ const Overlay = styled.div`
   display: grid;
   display: -ms-grid;
   align-content: center;
+  -ms-flex-line-pack: center;
 `
 
 const Copy = styled.p`
@@ -80,6 +81,7 @@ const Separator = styled.div`
   display: -ms-grid;
   -ms-grid-columns: 1fr 1fr;
   align-items: center;
+  -ms-flex-align: center;
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: grid;
     grid-template-columns: 1fr;

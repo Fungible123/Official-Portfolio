@@ -72,6 +72,7 @@ const List = styled.div`
   display: -ms-grid;
   -ms-grid-columns: 1fr 3fr;
   align-items: center;
+  -ms-flex-align: center;
   span {
     font-weight: bold;
     font-size: 24px;
@@ -143,9 +144,13 @@ const Contact = styled.div`
   height: 179px;
   background-color: ${props => props.theme.color.colored.shapes};
   display: flex;
+  display: -ms-flexbox;
   flex-direction: row;
+  -ms-flex-direction: row;
   justify-content: center;
+  -ms-flex-pack: center;
   align-items: center;
+  -ms-flex-align: center;
   h2 {
     margin-right: 20px;
   }

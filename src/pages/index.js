@@ -23,21 +23,21 @@ const InnerContainer = styled.div`
 const ProjectContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  display:-ms-grid;
+  display: -ms-grid;
   -ms-grid-columns: 1fr 1fr;
   grid-gap: 80px;
   margin-bottom: 60px;
   @media (max-width: ${props => props.theme.screen.md}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    display:-ms-grid;
+    display: -ms-grid;
     -ms-grid-columns: 1fr 1fr;
     grid-gap: 20px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: grid;
     grid-template-columns: 1fr;
-    display:-ms-grid;
+    display: -ms-grid;
     -ms-grid-columns: 1fr;
     grid-gap: 20px;
     margin: 0 10px;
@@ -52,11 +52,13 @@ const ProjectLink = styled(ExternalLink)`
   border-radius: 20px;
   transition: all 0.2s ease-in-out;
   transform: translateY(0%);
+  -ms-transform: translateY(0%);
   color: ${props => props.theme.color.dark};
   &:hover {
     border: 1px solid #0a7953;
     box-shadow: 0px 4px 10px rgba(10, 121, 83, 0.3);
     transform: translateY(-1%);
+    -ms-transform: translateY(-1%);
   }
   @media (max-width: ${props => props.theme.screen.md}) {
     margin: auto 0;
