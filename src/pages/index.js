@@ -23,16 +23,22 @@ const InnerContainer = styled.div`
 const ProjectContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  display:-ms-grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-gap: 80px;
   margin-bottom: 60px;
   @media (max-width: ${props => props.theme.screen.md}) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    display:-ms-grid;
+    -ms-grid-columns: 1fr 1fr;
     grid-gap: 20px;
   }
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: grid;
     grid-template-columns: 1fr;
+    display:-ms-grid;
+    -ms-grid-columns: 1fr;
     grid-gap: 20px;
     margin: 0 10px;
   }

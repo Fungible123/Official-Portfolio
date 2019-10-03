@@ -28,11 +28,15 @@ const Image = styled(Img)`
 const MainSectionContainer = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
+  display: -ms-grid;
+  -ms-grid-columns: 2fr 1fr;
   grid-gap: 80px;
   margin-bottom: 50px;
   @media (max-width: ${props => props.theme.screen.md}) {
     display: grid;
     grid-template-columns: 1fr;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
     grid-gap: 20px;
   }
   @media (max-width: ${props => props.theme.screen.xs}) {
@@ -65,6 +69,8 @@ const LeftSection = styled.div`
 const List = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 3fr;
   align-items: center;
   span {
     font-weight: bold;
@@ -76,6 +82,8 @@ const List = styled.div`
   @media (max-width: ${props => props.theme.screen.xs}) {
     display: grid;
     grid-template-columns: 1fr;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
     justify-items: center;
   }
 `
@@ -110,6 +118,8 @@ const SkillsContainer = styled.div`
 const Skill = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 1fr;
   grid-gap: 10px;
   list-style: none;
   text-align: center;
