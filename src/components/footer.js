@@ -18,9 +18,7 @@ const Overlay = styled.div`
   height: 191px;
   background: rgba(29, 29, 29, 0.9);
   display: grid;
-  display: -ms-grid;
   align-content: center;
-  -ms-flex-line-pack: center;
 `
 
 const Copy = styled.p`
@@ -70,23 +68,16 @@ const Breadcrumb = styled.div`
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: grid;
     grid-row-start: 1;
-    display: -ms-grid;
-    -ms-grid-row-start: 1;
   }
 `
 
 const Separator = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  display: -ms-grid;
-  -ms-grid-columns: 1fr 1fr;
   align-items: center;
-  -ms-flex-align: center;
   @media (max-width: ${props => props.theme.screen.sm}) {
     display: grid;
     grid-template-columns: 1fr;
-    display: -ms-grid;
-    -ms-grid-columns: 1fr;
     text-align: center;
   }
 `
