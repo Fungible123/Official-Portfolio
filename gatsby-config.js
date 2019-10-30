@@ -3,8 +3,8 @@ const dotenv = require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Donny Layug - Official Portfolio`,
-    description: `Official Portfolio created with Gatsby and React.`,
+    title: `Donny Layug - Freelance Web Developer / Designer`,
+    description: `Official Portfolio created with Gatsby and React. Freelance Web Developer.`,
     author: `Donny Layug`,
     image: `src/images/officialportfolio.jpg`,
   },

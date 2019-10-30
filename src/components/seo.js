@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, image }) {
+function SEO({ description, lang, meta, title, image, keywords }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -77,7 +77,16 @@ function SEO({ description, lang, meta, title, image }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ]
+        .concat(meta)
+        .concat(
+          keywords.length > 0
+            ? {
+                name: `keywords`,
+                content: keywords.join(`, `),
+              }
+            : []
+        )}
     />
   )
 }
@@ -87,6 +96,7 @@ SEO.defaultProps = {
   meta: [],
   description: ``,
   image: ``,
+  keywords: [],
 }
 
 SEO.propTypes = {

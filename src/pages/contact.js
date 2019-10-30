@@ -142,7 +142,16 @@ const SocialIcons = styled.div`
 const Contact = () => {
   return (
     <Layout>
-      <SEO title="Contact" />
+      <SEO
+        title="Contact"
+        keywords={[
+          "contact",
+          "message",
+          "connect",
+          "social media",
+          "freelance",
+        ]}
+      />
       <Container>
         <Formik
           initialValues={{ name: "", email: "", message: "" }}

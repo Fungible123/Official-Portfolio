@@ -144,7 +144,20 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO
+        title="Home"
+        keywords={[
+          "home",
+          "portfolio",
+          "gatsby",
+          "react",
+          "web development",
+          "web design",
+          "freelance",
+          "responsive",
+          "modern",
+        ]}
+      />
       <Hero />
       <Container>
         <InnerContainer id="proj">

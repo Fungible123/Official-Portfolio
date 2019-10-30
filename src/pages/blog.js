@@ -80,7 +80,19 @@ const Blog = () => {
 
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO
+        title="Blog"
+        keywords={[
+          "blog",
+          "gatsby",
+          "react",
+          "web development",
+          "web design",
+          "reading",
+          "learning",
+          "tutorials",
+        ]}
+      />
       <Container>
         <SectionContainer>
           <h1>Blog</h1>

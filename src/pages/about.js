@@ -215,7 +215,20 @@ const About = () => {
   `)
   return (
     <Layout>
-      <SEO title="About" />
+      <SEO
+        title="About"
+        keywords={[
+          "about",
+          "portfolio",
+          "technology",
+          "services",
+          "business",
+          "brochure",
+          "personal",
+          "portfolio",
+          "email template",
+        ]}
+      />
       <Container>
         <Title>About Me</Title>
         <MainSectionContainer>
