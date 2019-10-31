@@ -156,6 +156,8 @@ const IndexPage = () => {
           "freelance",
           "responsive",
           "modern",
+          "philippines",
+          "manila",
         ]}
       />
       <Hero />
@@ -172,17 +174,6 @@ const IndexPage = () => {
                   Tech: Gatsby, React, Formik, Yup, Styled Components, Slick
                   Carousel
                 </p>
-              </ProjectContent>
-            </ProjectLink>
-
-            <ProjectLink href="https://fungible123.github.io/Email-Template/">
-              <Image fluid={project.email.childImageSharp.fluid} />
-              <ProjectContent>
-                <h3>Rock on Tees</h3>
-                <p>Category: HTML Email Template</p>
-                <p>Tech: MJML</p>
-                <br />
-                <br />
               </ProjectContent>
             </ProjectLink>
 
@@ -203,6 +194,17 @@ const IndexPage = () => {
                 <p>
                   Tech: HTML, CSS, Javascript, jQuery, Bootstrap, SASS, Gulp
                 </p>
+              </ProjectContent>
+            </ProjectLink>
+
+            <ProjectLink href="https://fungible123.github.io/Email-Template/">
+              <Image fluid={project.email.childImageSharp.fluid} />
+              <ProjectContent>
+                <h3>Rock on Tees</h3>
+                <p>Category: HTML Email Template</p>
+                <p>Tech: MJML</p>
+                <br />
+                <br />
               </ProjectContent>
             </ProjectLink>
 

@@ -1,22 +1,17 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
-import BackgroundImage from "gatsby-background-image"
 import styled from "styled-components"
 import { Container } from "@styles/container"
+import { Link } from "gatsby"
 import ExternalLink from "./externalLinks"
 
-const Background = styled(BackgroundImage)`
+const Background = styled.div`
   width: 100%;
-  height: 191px;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(90deg, #00260d 0%, #000a03 100%);
 `
 
 const Overlay = styled.div`
   width: 100%;
   height: 191px;
-  background: rgba(29, 29, 29, 0.9);
   display: grid;
   align-content: center;
 `
@@ -83,19 +78,8 @@ const Separator = styled.div`
 `
 
 const Footer = () => {
-  const footerImg = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "access-close-up-code-1089438.jpg" }) {
-        childImageSharp {
-          fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-    }
-  `)
   return (
-    <Background fluid={footerImg.file.childImageSharp.fluid}>
+    <Background>
       <Overlay>
         <Container>
           <Separator>

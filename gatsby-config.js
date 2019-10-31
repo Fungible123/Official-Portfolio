@@ -3,8 +3,8 @@ const dotenv = require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    title: `Donny Layug - Freelance Web Developer / Designer`,
-    description: `Official Portfolio created with Gatsby and React. Freelance Web Developer.`,
+    title: `Donny Layug - Freelance Web Developer | Web Designer | Philippines`,
+    description: `Official Portfolio created with Gatsby and React. Freelance Web Developer and Designer.`,
     author: `Donny Layug`,
     image: `src/images/officialportfolio.jpg`,
   },
@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`tw cen mt\:300,400,700`],
+        fonts: [`tw cen mt\:300,400,700`, `prompt\:300,400,700`],
         display: `swap`,
       },
     },

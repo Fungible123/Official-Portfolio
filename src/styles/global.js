@@ -17,26 +17,26 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h1 {
-        font-family: ${props => props.theme.font.primary};
+        font-family: ${props => props.theme.font.secondary};
         color: ${props => props.theme.color.colored.general};
-        ${props => props.theme.font_size.xlarge}
+        ${props => props.theme.font_size.large}
     }
 
     h2 {
         font-family: ${props => props.theme.font.primary};
         color: ${props => props.theme.color.dark};
-        ${props => props.theme.font_size.large}
+        ${props => props.theme.font_size.regular}
     }
 
     h3 {
         font-family: ${props => props.theme.font.primary};
         color: ${props => props.theme.color.dark};
-        ${props => props.theme.font_size.regular}
+        ${props => props.theme.font_size.medium}
     }
 
     p {
         font-family: ${props => props.theme.font.primary};
-        ${props => props.theme.font_size.medium}
+        ${props => props.theme.font_size.small}
     }
 
     li {

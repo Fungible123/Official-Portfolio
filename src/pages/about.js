@@ -9,63 +9,123 @@ import SEO from "@components/seo"
 import Scrollup from "@components/scrollup"
 
 const Title = styled.h1`
-  margin-top: 100px;
+  margin: 100px 0px 30px 0px;
   @media (max-width: ${props => props.theme.screen.xs}) {
     font-size: 48px;
     text-align: center;
   }
+  text-align: ${props => (props.right ? "right" : "left")};
 `
 
 const Image = styled(Img)`
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
+  align-self: center;
+  justify-self: center;
   @media (max-width: ${props => props.theme.screen.xs}) {
     width: 60px;
     height: 60px;
+    margin-bottom: 20px;
   }
 `
 
-const MainSectionContainer = styled.div`
+const DescriptionContainer = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 80px;
-  margin-bottom: 50px;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  margin-bottom: 100px;
   @media (max-width: ${props => props.theme.screen.md}) {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 20px;
   }
   @media (max-width: ${props => props.theme.screen.xs}) {
-    margin: 0 20px;
+    padding: 0 20px;
   }
 `
 
-const SectionContainer = styled.div`
-  margin: 50px 0;
-  p {
-    text-align: justify;
+const Description = styled.div`
+  grid-column-start: 2;
+  margin: 30px 0px;
+  text-align: justify;
+  h3 {
+    margin-bottom: 20px;
     @media (max-width: ${props => props.theme.screen.xs}) {
       font-size: 18px;
+      font-weight: bold;
     }
   }
+  p {
+    margin-bottom: 20px;
+  }
   @media (max-width: ${props => props.theme.screen.md}) {
-    margin: 30px 0;
+    grid-column-start: 1;
   }
 `
 
-const LeftSection = styled.div`
+const TechnologyContentContainer = styled.div`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   p {
-    margin-top: 50px;
-    @media (max-width: ${props => props.theme.screen.xs}) {
-      margin: 30px 0;
-    }
+    text-align: justify;
+    color: ${props => props.theme.color.light};
+  }
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    padding: 0 20px;
+  }
+`
+
+const TechnologyContainer = styled.div`
+  width: 100%;
+  background: linear-gradient(90deg, #00260d 0%, #000a03 100%);
+  padding: 50px 0px;
+`
+
+const ServicesContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  margin-bottom: 100px;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    padding: 0 20px;
+  }
+`
+
+const Services = styled.div`
+  grid-column-start: 2;
+  margin: 30px 0px;
+  text-align: justify;
+  border-left: 1px solid #0a7953;
+  @media (max-width: ${props => props.theme.screen.md}) {
+    border-left: none;
+  }
+`
+
+const ServiceList = styled.div`
+  border-bottom: 1px solid #c4c4c4;
+  margin-top: 30px;
+  margin-left: 10px;
+  &:last-child {
+    margin-left: 0px;
+    padding-left: 10px;
+  }
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    margin-left: 0px;
   }
 `
 
 const List = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
-  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
   span {
     font-weight: bold;
     font-size: 24px;
@@ -93,90 +153,31 @@ const LearnMore = styled.div`
   }
 `
 
-const SkillsContainer = styled.div`
-  margin-bottom: 20px;
-  @media (max-width: ${props => props.theme.screen.md}) {
-    p {
-      text-align: center;
-    }
-  }
-  @media (max-width: ${props => props.theme.screen.xs}) {
-    p {
-      font-weight: bold;
-    }
-  }
-`
-
-const Skill = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  list-style: none;
-  text-align: center;
-  padding: 0;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #0a7953;
-  li {
-    background-color: ${props => props.theme.color.colored.shapes};
-    color: ${props => props.theme.color.colored.general};
-    border-radius: 5px;
-    transition: all 0.2s ease-in;
-    &:hover {
-      background-color: ${props => props.theme.color.colored.general};
-      color: ${props => props.theme.color.light};
-    }
-  }
-`
-
-const Contact = styled.div`
-  width: 100%;
-  height: 179px;
-  background-color: ${props => props.theme.color.colored.shapes};
-  display: flex;
-  display: -ms-flexbox;
-  justify-content: center;
-  align-items: center;
-  h2 {
-    margin-right: 20px;
-  }
-  @media (max-width: ${props => props.theme.screen.md}) {
-    h2 {
-      font-size: 36px;
-    }
-  }
-  @media (max-width: ${props => props.theme.screen.md}) {
-    display: flex;
-    flex-direction: column;
-    h2 {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  }
-`
-
-const Button = styled(Link)`
-  width: 307px;
-  height: 52px;
-  border: 1px solid #0a7953;
-  box-sizing: border-box;
-  border-radius: 10px;
-  transition: all 0.2s ease-in;
+const Contact = styled(Link)`
   text-decoration: none;
-  p {
+  text-align: center;
+`
+
+const Button = styled.div`
+  margin: 30px 0px 0px 10px;
+  padding: 20px;
+  border: 1px solid #0a7953;
+  transition: all 0.2s ease-in-out;
+  h2 {
     color: ${props => props.theme.color.colored.general};
-    text-align: center;
-    padding: 5px 0;
-    transition: color 0.2s ease-in;
+    transition: all 0.2s ease-in-out;
   }
   &:hover {
     background-color: #0a7953;
-    p {
+    h2 {
       color: ${props => props.theme.color.light};
     }
   }
-  @media (max-width: ${props => props.theme.screen.md}) {
-    width: 207px;
-    height: 45px;
+  @media (max-width: ${props => props.theme.screen.xs}) {
+    margin: 30px 0px 0px 00px;
+    h2 {
+      font-size: 24px;
+    }
   }
 `
 
@@ -204,9 +205,9 @@ const About = () => {
           }
         }
       }
-      content: file(relativePath: { eq: "content.png" }) {
+      content: file(relativePath: { eq: "content1.png" }) {
         childImageSharp {
-          fluid(quality: 100, maxWidth: 90, maxHeight: 90) {
+          fluid(quality: 100, maxWidth: 80, maxHeight: 80) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -231,24 +232,37 @@ const About = () => {
       />
       <Container>
         <Title>About Me</Title>
-        <MainSectionContainer>
-          <SectionContainer>
+        <DescriptionContainer>
+          <Description>
+            <h3>
+              Hi! Donny here. I’m a freelance web developer based in the
+              Philippines and I specialize in developing modern static websites
+              using Gatsby and React.
+            </h3>
             <p>
-              My name is Donny. I make websites that are responsive, intuitive,
-              and user-friendly. From my previous career I have been working as
-              a provisioning consultant for telecommunication companies in the
-              US and Australia. I’ve decided to shift into programming because I
-              felt that coding is a much more satisfying and fulfilling
-              activity. It also broadened my perspective in terms of personal
-              growth and development. I specialize in front-end development, but
-              I continue to improve my programming knowledge and expertise so
-              that I can become a full-stack developer.
+              Previously, I was a provisioning consultant for telecommunications
+              companies in the US and Australia. I’ve decided to shift into web
+              development because I felt that coding is a much more satisfying
+              and fulfilling activity. It also broadened my perspective in terms
+              of personal growth and development.
             </p>
-            <LeftSection>
-              <Title>My Service</Title>
+            <p>
+              I build websites that are fast, responsive, and user-friendly.
+              They are easy to maintain and are SEO ready. I can also do web
+              design which I then translate into a working website.
+            </p>
+          </Description>
+        </DescriptionContainer>
+      </Container>
+
+      <TechnologyContainer>
+        <Container>
+          <Title right>Technology</Title>
+          <TechnologyContentContainer>
+            <div>
               <p>
-                Recently, I have switched to using a modern architecture that
-                allows me to build fast and reliable websites. I use{" "}
+                I use a modern architecture that allows me to build fast and
+                reliable websites. I use{" "}
                 <External href="https://jamstack.org/">JAMstack </External>
                 and here are the key benefits:
               </p>
@@ -297,63 +311,65 @@ const About = () => {
                   Click here to learn more...
                 </External>
               </LearnMore>
-            </LeftSection>
-          </SectionContainer>
-          <SectionContainer>
-            <SkillsContainer>
-              <p>Main Skills</p>
-              <Skill>
-                <li>HTML5</li>
-                <li>CSS</li>
-                <li>SASS</li>
-                <li>Styled Components</li>
-                <li>Javascript</li>
-                <li>jQuery</li>
-                <li>React</li>
-                <li>Gatsby</li>
-                <li>Gulp</li>
-                <li>Parcel</li>
-                <li>Bootstrap</li>
-                <li>Foundation</li>
-                <li>GraphQL</li>
-                <li>Github</li>
-                <li>MJML</li>
-              </Skill>
-            </SkillsContainer>
-            <SkillsContainer>
-              <p>Other Skills</p>
-              <Skill>
-                <li>Photoshop</li>
-                <li>Lightroom</li>
-                <li>Photography</li>
-                <li>Figma</li>
-                <li>Project Management</li>
-                <li>Provisioning</li>
-              </Skill>
-            </SkillsContainer>
-            <SkillsContainer>
-              <p>List of Services</p>
-              <Skill>
-                <li>Blog</li>
-                <li>Brochure</li>
-                <li>Business</li>
-                <li>Email Template</li>
-                <li>Personal</li>
-                <li>Photography</li>
-                <li>Portfolio</li>
-                <li>Travel</li>
-              </Skill>
-            </SkillsContainer>
-          </SectionContainer>
-        </MainSectionContainer>
+            </div>
+          </TechnologyContentContainer>
+        </Container>
+      </TechnologyContainer>
+
+      <Container>
+        <Title>Services</Title>
+        <ServicesContainer>
+          <Services>
+            <ServiceList>
+              <h3>Business</h3>
+              <p>
+                Do you require a business website that’s devoted to representing
+                a specific business? Let’s showcase your brand and communicate
+                the types of products and services your business offers.
+              </p>
+            </ServiceList>
+            <ServiceList>
+              <h3>Brochure</h3>
+              <p>
+                Need a simplified form of business website? If you know that you
+                need an online presence, but don’t want to invest a lot into it,
+                a simple brochure site that includes a few pages to layout a
+                basic info of what you do and provide a contact info may be
+                enough for you.
+              </p>
+            </ServiceList>
+            <ServiceList>
+              <h3>Personal</h3>
+              <p>
+                Personal blogs, vlogs, and photo diaries you want to share with
+                the world? This perfectly works for you!
+              </p>
+            </ServiceList>
+            <ServiceList>
+              <h3>Portfolio</h3>
+              <p>
+                Feel the need to show examples of past work and the quality of
+                work you provide? A portfolio website is the best place to
+                showcase your best work.
+              </p>
+            </ServiceList>
+            <ServiceList>
+              <h3>Email Template</h3>
+              <p>
+                Need some form of email marketing? An HTML Email Template is
+                just the right one for your email messages or newsletters.
+              </p>
+            </ServiceList>
+            <Contact to="/contact/">
+              <Button>
+                <h2>Ready to get started? Let’s do it!</h2>
+              </Button>
+            </Contact>
+          </Services>
+        </ServicesContainer>
       </Container>
+
       <Scrollup />
-      <Contact>
-        <h2>Need a website?</h2>
-        <Button to="/contact/">
-          <p>Lets get started!</p>
-        </Button>
-      </Contact>
     </Layout>
   )
 }

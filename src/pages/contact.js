@@ -220,10 +220,28 @@ const Contact = () => {
                     <Label htmlFor="email">Need...</Label>
                     <Fields component="select" name="options">
                       <option value="">-- Please Select --</option>
-                      <option value="website">Website</option>
+                      <option value="business">Business Site</option>
+                      <option value="brochure">Brochure Site</option>
+                      <option value="personal">Personal Site</option>
+                      <option value="portfolio">Portfolio Site</option>
+                      <option value="email template">Email Template</option>
                       <option value="help">Help</option>
                       <option value="inquiry">Inquiry</option>
                     </Fields>
+                  </FormContainers>
+                  <FormContainers>
+                    <Label htmlFor="email">Layout</Label>
+                    <Fields component="select" name="layout">
+                      <option value="">-- Please Select --</option>
+                      <option value="singe-page">Single-page Layout</option>
+                      <option value="hybrid">Hybrid Layout</option>
+                      <option value="multi-page">Multi-page Layout</option>
+                      <option value="2 column">2 Column Layout</option>
+                    </Fields>
+                  </FormContainers>
+                  <FormContainers>
+                    <Label htmlFor="text">Budget</Label>
+                    <Fields type="text" name="budget" />
                   </FormContainers>
                   <FormContainers>
                     <Label htmlFor="message">
