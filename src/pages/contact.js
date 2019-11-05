@@ -129,6 +129,18 @@ const Error = styled.p`
   }
 `
 
+const ContactInfo = styled.div`
+  max-width: 825px;
+  margin: 50px auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: ${props => props.theme.screen.sm}) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+`
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -196,6 +208,10 @@ const Contact = () => {
                   have an inquiry, need help, or need to get a website done.
                 </p>
               </HeaderContainer>
+              <ContactInfo>
+                <span>Phone: (+63) 906 498 0623</span>
+                <span>Email: donnylayug.webdev@gmail.com</span>
+              </ContactInfo>
               <Grid>
                 <div>
                   <FormContainers>
