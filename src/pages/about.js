@@ -162,10 +162,10 @@ const Button = styled.div`
   margin: 30px 0px 0px 10px;
   padding: 20px;
   border: 1px solid #0a7953;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 1s ease-in-out; */
   h2 {
     color: ${props => props.theme.color.colored.general};
-    transition: all 0.2s ease-in-out;
+    /* transition: all 1s ease-in-out; */
   }
   &:hover {
     background-color: #0a7953;
@@ -231,8 +231,15 @@ const About = () => {
         ]}
       />
       <Container>
-        <Title>About Me</Title>
-        <DescriptionContainer>
+        <Title data-sal="fade" data-sal-duration="1000">
+          About Me
+        </Title>
+        <DescriptionContainer
+          data-sal="slide-left"
+          data-sal-duration="1000"
+          data-sal-delay="300"
+          data-sal-easing="ease"
+        >
           <Description>
             <h3>
               Hi! Donny here. I’m a freelance web developer based in the
@@ -257,16 +264,28 @@ const About = () => {
 
       <TechnologyContainer>
         <Container>
-          <Title right>Technology</Title>
+          <Title right data-sal="fade" data-sal-duration="1000">
+            Technology
+          </Title>
           <TechnologyContentContainer>
             <div>
-              <p>
+              <p
+                data-sal="slide-right"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 I use a modern architecture that allows me to build fast and
                 reliable websites. I use{" "}
                 <External href="https://jamstack.org/">JAMstack </External>
                 and here are the key benefits:
               </p>
-              <List>
+              <List
+                data-sal="slide-right"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 <Image fluid={icons.time.childImageSharp.fluid} />
                 <p>
                   <span>Speed</span>: The speed advantages of static websites
@@ -276,7 +295,12 @@ const About = () => {
                   <External href="https://www.netlify.com/"> Netlify</External>.
                 </p>
               </List>
-              <List>
+              <List
+                data-sal="slide-right"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 <Image fluid={icons.lock.childImageSharp.fluid} />
                 <p>
                   <span>Security</span>: With server-side processes abstracted
@@ -285,7 +309,12 @@ const About = () => {
                   third-party services.
                 </p>
               </List>
-              <List>
+              <List
+                data-sal="slide-right"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 <Image fluid={icons.money.childImageSharp.fluid} />
                 <p>
                   <span>Cheaper</span>: When your deployment amounts to a stack
@@ -294,7 +323,12 @@ const About = () => {
                   and often include scaling in all of their plans.
                 </p>
               </List>
-              <List>
+              <List
+                data-sal="slide-right"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 <Image fluid={icons.content.childImageSharp.fluid} />
                 <p>
                   <span>Content Creation</span>: Content is usually in a
@@ -306,7 +340,12 @@ const About = () => {
                   websites.
                 </p>
               </List>
-              <LearnMore>
+              <LearnMore
+                data-sal="slide-right"
+                data-sal-duration="1000"
+                data-sal-delay="300"
+                data-sal-easing="ease"
+              >
                 <External href="https://jamstack.wtf/">
                   Click here to learn more...
                 </External>
@@ -317,10 +356,17 @@ const About = () => {
       </TechnologyContainer>
 
       <Container>
-        <Title>Services</Title>
+        <Title data-sal="fade" data-sal-duration="1000">
+          Services
+        </Title>
         <ServicesContainer>
           <Services>
-            <ServiceList>
+            <ServiceList
+              data-sal="slide-left"
+              data-sal-duration="1000"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
               <h3>Business</h3>
               <p>
                 Do you require a business website that’s devoted to representing
@@ -328,7 +374,12 @@ const About = () => {
                 the types of products and services your business offers.
               </p>
             </ServiceList>
-            <ServiceList>
+            <ServiceList
+              data-sal="slide-left"
+              data-sal-duration="1000"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
               <h3>Brochure</h3>
               <p>
                 Need a simplified form of business website? If you know that you
@@ -338,14 +389,24 @@ const About = () => {
                 enough for you.
               </p>
             </ServiceList>
-            <ServiceList>
+            <ServiceList
+              data-sal="slide-left"
+              data-sal-duration="1000"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
               <h3>Personal</h3>
               <p>
                 Personal blogs, vlogs, and photo diaries you want to share with
                 the world? This perfectly works for you!
               </p>
             </ServiceList>
-            <ServiceList>
+            <ServiceList
+              data-sal="slide-left"
+              data-sal-duration="1000"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
               <h3>Portfolio</h3>
               <p>
                 Feel the need to show examples of past work and the quality of
@@ -353,7 +414,12 @@ const About = () => {
                 showcase your best work.
               </p>
             </ServiceList>
-            <ServiceList>
+            <ServiceList
+              data-sal="slide-left"
+              data-sal-duration="1000"
+              data-sal-delay="300"
+              data-sal-easing="ease"
+            >
               <h3>Email Template</h3>
               <p>
                 Need some form of email marketing? An HTML Email Template is
@@ -361,7 +427,11 @@ const About = () => {
               </p>
             </ServiceList>
             <Contact to="/contact/">
-              <Button>
+              <Button
+                data-sal="slide-left"
+                data-sal-duration="1000"
+                data-sal-easing="ease-in-out"
+              >
                 <h2>Ready to get started? Let’s do it!</h2>
               </Button>
             </Contact>

@@ -236,7 +236,11 @@ const Hero = () => {
         }}
       />
       <Intro>
-        <TopCard>
+        <TopCard
+          data-sal="slide-right"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+        >
           <Link to="/about/">
             <h1>Donny Layug</h1>
           </Link>
@@ -255,7 +259,11 @@ const Hero = () => {
             </ExternalLink>
           </div>
         </TopCard>
-        <BottomCard>
+        <BottomCard
+          data-sal="slide-left"
+          data-sal-duration="1000"
+          data-sal-easing="ease"
+        >
           <h2>Web Developer / Designer</h2>
           <Projects href="#proj">
             <h3>I Build Modern, Fast, Responsive Websites.</h3>
